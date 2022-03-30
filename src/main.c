@@ -1,17 +1,23 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "RascunhoOrd.h"
+#include <time.h>
+
+void randomArray(int lista[], int tam){
+    int numero;
+    for (int i = 0; i < tam; i++){
+        numero = (rand() % 100);
+        lista[i] = numero;
+    }
+}
 
 int main(){
-    int i,tam;
-    printf("Tamanho do vetor ");
-    scanf("%d",&tam);
+    
+    int tam;
+    scanf("%d", &tam);
+
     int lista[tam];
-    for (i=0;i<tam;i++)
-    {  
-        printf("Elemento %d = ",i);
-        scanf("%d",&lista[i]);
-    }
+    randomArray(lista,tam);
 
 
     Bubble_sort(lista,tam);

@@ -25,8 +25,7 @@ void Bubble_sort(int *lista,int tam){
 
 void exibir(int *lista,int tam){
     int i;
-    for( i = 0; i < tam; i++ )
-    {
+    for( i = 0; i < tam; i++ ){
         printf( "%s%d", (i>0)?", ":"", lista[i] );
     }
     printf("\n");
@@ -82,8 +81,7 @@ void Shell_sort(int *lista, int tam){
     }
 }
 
-void Quick_sort( int *lista, int start, int end)
-{
+void Quick_sort( int *lista, int start, int end){
     if( start < end ){
         int l = start + 1;
         int r = end;
@@ -91,16 +89,19 @@ void Quick_sort( int *lista, int start, int end)
         while( l < r ){
             if( lista[l] <= p ){
                 l++;
-            }else if( lista[r] >= p ){
+            }
+            else if( lista[r] >= p ){
                 r--;
-            }else{
+            }
+            else{
                 swap( &lista[l], &lista[r] );
             }
         }
         if( lista[l] < p ){
             swap( &lista[l], &lista[start] );
             l--;
-        }else{
+        }
+        else{
             l--;
             swap( &lista[l], &lista[start] );
         }
