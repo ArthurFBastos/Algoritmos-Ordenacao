@@ -12,7 +12,7 @@ void randomArray(int lista[], int tam){
 }
 
 int main(){
-    
+    srand(time(NULL))
     int tam;
     scanf("%d", &tam);
 
